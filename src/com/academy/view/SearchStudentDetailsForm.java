@@ -176,8 +176,7 @@ public class SearchStudentDetailsForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void searchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtnActionPerformed
-        String studentID= idTxtField.getText();
-        Student student= Controllers.searchStudent(studentID);
+        Student student= Controllers.searchStudent(idTxtField.getText());
         if (student==null){
             JOptionPane.showMessageDialog(null,"No Student");
         }else{

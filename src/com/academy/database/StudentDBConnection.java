@@ -1,5 +1,7 @@
 package com.academy.database;
 
+import com.academy.model.Student;
+
 public class StudentDBConnection {
     private static StudentDBConnection studentDBConnection;
     private StudentDB studentDB;
@@ -18,4 +20,6 @@ public class StudentDBConnection {
     public StudentDB getStudentDB(){
         return studentDB;
     }
+
+
 }

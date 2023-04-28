@@ -162,6 +162,7 @@ public class AddStudentForm extends javax.swing.JFrame {
         double dbmsMarks=Double.parseDouble(dbmsTxtField.getText());
 
         Student student=new Student(studentID,studentName,prfMarks,dbmsMarks);
+
         boolean isAdded= Controllers.addStudent(student);
 
         if(isAdded){

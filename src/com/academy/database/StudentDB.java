@@ -27,7 +27,7 @@ public class StudentDB {
 
     //Search Student
     public int searchStudent(Student student) {
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < studentArr.length; i++) {
             if (studentArr[i].equals(student)) {
                 return i;
             }
@@ -36,17 +36,10 @@ public class StudentDB {
     }
 
     public Student searchStudent(String studentId) {
-        for (int i = 0; i < index; i++) {
-            if (studentArr[i].equals(studentId)) {
+        for (int i = 0; i < studentArr.length; i++) {
+            if (studentArr[i].getStudentID().equalsIgnoreCase(studentId)) {
                 return studentArr[i];
             }
-        }
-        return null;
-    }
-
-    public Student getStudent(int i){
-        if (i >=0 && i <studentArr.length){
-            return studentArr[i];
         }
         return null;
     }
@@ -70,5 +63,21 @@ public class StudentDB {
             }
             return true;
         }
+    }
+
+    public Student getStudentWithID(String studentID) {
+        Student student=searchStudent(studentID);
+        int index=searchStudent(student);
+
+        return studentArr[index];
+    }
+
+    public boolean updateStudent(Student student, String id, String name, double prf, double dbms) {
+        student.setStudentID(id);
+        student.setStudentName(name);
+        student.setPrfMarks(prf);
+        student.setDbmsMarks(dbms);
+
+        return true;
     }
 }

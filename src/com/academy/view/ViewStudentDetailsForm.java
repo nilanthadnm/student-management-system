@@ -149,7 +149,7 @@ public class ViewStudentDetailsForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void viewDetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailsBtnActionPerformed
-       Student[] students =Controllers.getStudents();
+       Student[] students =Controllers.getAllStudents();
         DefaultTableModel tbModel=(DefaultTableModel)jTable1.getModel();
         for (int i = 0; i < students.length; i++) {
             Student student=students[i];

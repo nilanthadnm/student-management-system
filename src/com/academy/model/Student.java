@@ -29,6 +29,22 @@ public class Student {
         return dbmsMarks;
     }
 
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void setPrfMarks(double prfMarks) {
+        this.prfMarks = prfMarks;
+    }
+
+    public void setDbmsMarks(double dbmsMarks) {
+        this.dbmsMarks = dbmsMarks;
+    }
+
     @Override
     public boolean equals(Object obj) {
         Student student=(Student) obj;
